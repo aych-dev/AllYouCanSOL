@@ -18,6 +18,7 @@ const config: Config = {
         customPage: '#2b3441',
         customCard: '#47566a',
         customCardHover: '#4f5e74',
+        customText: '#f1f3f5',
       },
     },
   },
