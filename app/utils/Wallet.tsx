@@ -1,21 +1,31 @@
+'use client';
+
+import React, { FC, ReactNode, useMemo } from 'react';
 import {
-  WalletProvider,
   ConnectionProvider,
+  WalletProvider,
 } from '@solana/wallet-adapter-react';
-import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
 import {
   AlphaWalletAdapter,
   LedgerWalletAdapter,
   PhantomWalletAdapter,
   SolflareWalletAdapter,
 } from '@solana/wallet-adapter-wallets';
-import type { AppProps } from 'next/app';
-import { useMemo } from 'react';
+import {
+  WalletModalProvider,
+  WalletDisconnectButton,
+  WalletMultiButton,
+} from '@solana/wallet-adapter-react-ui';
 
-import '@solana/wallet-adapter-react-ui/styles.css';
+require('@solana/wallet-adapter-react-ui/styles.css');
 
-const Wallet = () => {
-  const endpoint = 'https://fancy-daphna-fast-mainnet.helius-rpc.com/';
+type Props = {
+  children?: React.ReactNode;
+};
+
+export const Wallet: FC<Props> = ({ children }) => {
+  const endpoint = 'https://obnoxious-eleni-fast-devnet.helius-rpc.com/';
+
   const wallets = useMemo(
     () => [
       new SolflareWalletAdapter(),
@@ -23,9 +33,15 @@ const Wallet = () => {
       new LedgerWalletAdapter(),
       new PhantomWalletAdapter(),
     ],
+
     []
   );
-  return <div>Wallet</div>;
-};
 
-export default Wallet;
+  return (
+    <ConnectionProvider endpoint={endpoint}>
+      <WalletProvider wallets={wallets} autoConnect>
+        <WalletModalProvider>{children}</WalletModalProvider>
+      </WalletProvider>
+    </ConnectionProvider>
+  );
+};

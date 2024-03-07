@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import NavBar from './components/NavBar';
 import './globals.css';
+import { Wallet } from './utils/Wallet';
+import React from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,12 +20,14 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <div className='flex flex-col h-screen max-h-screen'>
-          <NavBar />
-          <div className='flex-grow overflow-y-auto bg-customPage text-customText'>
-            {children}
+        <Wallet>
+          <div className='flex flex-col h-screen max-h-screen'>
+            <NavBar />
+            <div className='flex-grow overflow-y-auto bg-customPage text-customText'>
+              {children}
+            </div>
           </div>
-        </div>
+        </Wallet>
       </body>
     </html>
   );
