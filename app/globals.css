@@ -15,3 +15,23 @@ button.wallet-adapter-button-trigger {
 button.wallet-adapter-button-trigger:hover {
   background-color: #7e7ca8 !important;
 }
+
+h1 {
+  @apply text-4xl;
+  margin: 0 0 5px 0;
+}
+h2 {
+  @apply text-3xl;
+}
+h3 {
+  @apply text-2xl;
+}
+h4 {
+  @apply text-xl;
+}
+h5 {
+  @apply text-lg;
+}
+p {
+  @apply text-sm;
+}
