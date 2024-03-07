@@ -1,5 +1,9 @@
 import Image from 'next/image';
 
 export default function Home() {
-  return <main>AYCS</main>;
+  return (
+    <main className='flex items-center justify-center h-screen text-4xl'>
+      ALL YOU CAN SOL
+    </main>
+  );
 }
