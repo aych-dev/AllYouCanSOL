@@ -6,3 +6,12 @@ body {
   margin: 0;
   padding: 0;
 }
+
+button.wallet-adapter-button-trigger {
+  background: #4e4c6c;
+  font-size: 16px;
+}
+
+button.wallet-adapter-button-trigger:hover {
+  background-color: #7e7ca8 !important;
+}

@@ -1,4 +1,7 @@
+'use client';
+
 import React from 'react';
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
 const NavBar = () => {
   return (
@@ -8,7 +11,9 @@ const NavBar = () => {
         <p>spot b</p>
         <p>spot c</p>
       </div>
-      <div>Connect Wallet</div>
+      <div>
+        <WalletMultiButton />
+      </div>
     </div>
   );
 };
