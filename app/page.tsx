@@ -1,6 +1,17 @@
+'use client';
 import RaffleCard from './components/RaffleCard';
+import { useWallet } from '@solana/wallet-adapter-react';
 
 export default function Home() {
+  const wallet = useWallet();
+  if (!wallet.publicKey) {
+    return (
+      <div className='flex items-center justify-center h-screen'>
+        <h4>ALL YOU CAN SOL</h4>
+      </div>
+    );
+  }
+
   return (
     <>
       <div className='border grid grid-cols-4 p-2'>
