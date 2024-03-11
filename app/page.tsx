@@ -7,8 +7,11 @@ export default function Home() {
 
   if (!wallet.publicKey) {
     return (
-      <div className='flex items-center justify-center h-screen'>
+      <div className=' flex flex-col items-center justify-center '>
         <h4>ALL YOU CAN SOL</h4>
+        <button className='border rounded p-2 bg-black hover:cursor-pointer'>
+          CLICK HERE
+        </button>
       </div>
     );
   }
@@ -25,19 +28,19 @@ export default function Home() {
         </div>
         <div className='p-2'>
           <RaffleCard />
-        </div>{' '}
+        </div>
         <div className='p-2'>
           <RaffleCard />
         </div>
         <div className='p-2'>
           <RaffleCard />
-        </div>{' '}
+        </div>
         <div className='p-2'>
           <RaffleCard />
         </div>
         <div className='p-2'>
           <RaffleCard />
-        </div>{' '}
+        </div>
         <div className='p-2'>
           <RaffleCard />
         </div>
