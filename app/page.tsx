@@ -1,4 +1,3 @@
-'use client';
 import { useWallet } from '@solana/wallet-adapter-react';
 import RaffleCard from './components/RaffleCard';
 
@@ -16,7 +15,6 @@ export default function Home() {
     );
   }
 
-  console.log(wallet.publicKey);
   return (
     <>
       <div className='border grid grid-cols-4 p-2'>

@@ -21,8 +21,9 @@ export async function GET() {
       }),
     });
     const { result } = await response.json();
+    const data = result.items;
 
-    return NextResponse.json(result, { status: 201 });
+    return NextResponse.json(data, { status: 201 });
   } catch (error) {
     return NextResponse.json(
       { message: 'FAILED  TO FETCH', error },

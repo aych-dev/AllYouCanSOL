@@ -20,14 +20,14 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <Wallet>
-          <div className='flex flex-col h-screen max-h-screen'>
+        <div className='flex flex-col h-screen max-h-screen'>
+          <Wallet>
             <NavBar />
             <div className='flex-grow overflow-y-auto bg-customPage text-customText'>
               {children}
             </div>
-          </div>
-        </Wallet>
+          </Wallet>
+        </div>
       </body>
     </html>
   );
