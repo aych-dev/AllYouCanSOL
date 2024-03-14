@@ -1,9 +1,23 @@
-const RaffleCard = () => {
+import React from 'react';
+
+const RaffleCard = async () => {
+  const getData = async () => {
+    try {
+      console.log('getting data...');
+      const res = await fetch('/api/Assets');
+      return res.json();
+    } catch (error) {
+      console.error('Errorin RaffleCard');
+    }
+  };
+
+  const data = await getData();
+  console.log(data);
+
   return (
     <div className='border border-green-400 p-3 flex flex-col'>
       <div className='flex flex-col items-center justify-center'>
         <button className='rounded p-2 border'>CLICK</button>
-
         <h3>Tesla CyberTruck</h3>
         <h4>Enter Raffle</h4>
       </div>

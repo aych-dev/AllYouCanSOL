@@ -1,9 +1,6 @@
-import { NextResponse } from 'next/server';
-
 export async function GET() {
-  const url = `https://mainnet.helius-rpc.com/?api-key=${process.env.APIKEY}`;
-
   try {
+    const url = `https://mainnet.helius-rpc.com/?api-key=${process.env.APIKEY}`;
     const response = await fetch(url, {
       method: 'POST',
       headers: {
@@ -20,12 +17,12 @@ export async function GET() {
         },
       }),
     });
-    const { result } = await response.json();
-    const data = result.items;
 
-    return NextResponse.json(data, { status: 201 });
+    const { result } = await response.json();
+
+    return Response.json(result, { status: 201 });
   } catch (error) {
-    return NextResponse.json(
+    return Response.json(
       { message: 'FAILED  TO FETCH', error },
       { status: 500 }
     );

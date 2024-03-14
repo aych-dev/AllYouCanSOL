@@ -1,5 +1,5 @@
 import React from 'react';
-import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
+import WalletConnectButton from '../utils/WalletConnectButton';
 
 const NavBar = () => {
   return (
@@ -10,7 +10,7 @@ const NavBar = () => {
         <p>spot c</p>
       </div>
       <div>
-        <WalletMultiButton />
+        <WalletConnectButton />
       </div>
     </div>
   );
