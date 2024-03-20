@@ -4,18 +4,18 @@ import { useWallet } from '@solana/wallet-adapter-react';
 import RaffleCard from './RaffleCard';
 
 const HomePage = () => {
-  //   const wallet = useWallet();
+  // const wallet = useWallet();
 
-  //   if (!wallet.publicKey) {
-  //     return (
-  //       <div className=' flex flex-col items-center justify-center '>
-  //         <h4>ALL YOU CAN SOL</h4>
-  //         <button className='border rounded p-2 bg-black hover:cursor-pointer'>
-  //           CLICK HERE
-  //         </button>
-  //       </div>
-  //     );
-  //   }
+  // if (!wallet.publicKey) {
+  //   return (
+  //     <div className=' flex flex-col items-center justify-center '>
+  //       <h4>ALL YOU CAN SOL</h4>
+  //       <button className='border rounded p-2 bg-black hover:cursor-pointer'>
+  //         CLICK HERE
+  //       </button>
+  //     </div>
+  //   );
+  // }
 
   return (
     <>
